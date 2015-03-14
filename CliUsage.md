@@ -36,6 +36,6 @@ Exit codes: 0 = SUCCESS, 1 = forbidden API detected, 2 = invalid command<br>
 line, 3 = unsupported JDK version, 4 = other error (I/O,...)<br>
 </pre>
 
-The command line parameters match those of the [Ant Task](AntUsage.md).
+The command line parameters match those of the [Ant Task](AntUsage).
 
 The detailed documentation (based on nightly snapshots) can be found here: http://jenkins.thetaphi.de/job/Forbidden-APIs/javadoc/
