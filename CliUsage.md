@@ -3,7 +3,7 @@
 _(since version 1.1)_ You can call the forbidden API checker from the command line:
 
 ```
-$ java -jar forbiddenapis-1.7.jar --help<br>
+$ java -jar forbiddenapis-1.7.jar --help
 usage: java -jar forbiddenapis-1.7.jar [options]
 Scans a set of class files for forbidden API usage.
     --allowmissingclasses           don't fail if a referenced class is
