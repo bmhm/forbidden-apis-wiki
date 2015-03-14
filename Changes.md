@@ -3,7 +3,7 @@ This page lists all changes since the first released version.
 # Version 1.7 (released 2014-11-24) #
 
 **New features:**
-  * Auto-generate HTML documentation for Ant Task, Maven Mojo, and CLI ([issue #32](/policeman-tools/forbidden-apis/32), [issue #37](https://code.google.com/p/forbidden-apis/issues/detail?id=#37)).
+  * Auto-generate HTML documentation for Ant Task, Maven Mojo, and CLI ([issue #32](/policeman-tools/forbidden-apis/issues/32), [issue #37](https://code.google.com/p/forbidden-apis/issues/detail?id=#37)).
   * Add a new documentation ZIP file to release ([issue #32](https://code.google.com/p/forbidden-apis/issues/detail?id=#32), [issue #37](https://code.google.com/p/forbidden-apis/issues/detail?id=#37)).
   * Add help-mojo ([issue #32](https://code.google.com/p/forbidden-apis/issues/detail?id=#32), [issue #37](https://code.google.com/p/forbidden-apis/issues/detail?id=#37)).
   * Add support for signaturesFilelist and signaturesFile elements ([issue #36](https://code.google.com/p/forbidden-apis/issues/detail?id=#36)).
