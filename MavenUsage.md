@@ -2,7 +2,7 @@
 
 To use the forbidden API checker in Maven, use the following template to include the plugin:
 
-```
+```xml
 <properties>
   <!-- 
    It is recommended to set the compiler version globally,
