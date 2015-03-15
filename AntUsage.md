@@ -40,7 +40,7 @@ The possible `<bundledsignatures>` can be found on a [separate page](BundledSign
 
 Alternatively, if you have the `forbiddenapis.jar` in your `~/.ant/lib` folder, you can omit the taskdef and use it via an ANTLIB mechanism:
 
-```
+```xml
 <project xmlns:fa="antlib:de.thetaphi.forbiddenapis">
 
   <!-- ... -->
@@ -51,7 +51,7 @@ Alternatively, if you have the `forbiddenapis.jar` in your `~/.ant/lib` folder, 
 
 If your project is using [Apache Ivy](http://ant.apache.org/ivy/) (recommended), you can define a cachepath for Ivy and download it automatically from Maven Central:
 
-```
+```xml
 <project xmlns:ivy="antlib:org.apache.ivy.ant" xmlns:fa="antlib:de.thetaphi.forbiddenapis">
 
   <property name="src.dir" location="..."/>
