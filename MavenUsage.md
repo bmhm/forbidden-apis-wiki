@@ -17,7 +17,7 @@ To use the forbidden API checker in Maven, use the following template to include
     <plugin>
       <groupId>de.thetaphi</groupId>
       <artifactId>forbiddenapis</artifactId>
-      <version>1.7</version>
+      <version>1.8</version>
       <configuration>
         <!-- disallow undocumented classes like sun.misc.Unsafe: -->
         <internalRuntimeForbidden>true</internalRuntimeForbidden>
