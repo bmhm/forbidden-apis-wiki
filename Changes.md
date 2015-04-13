@@ -6,8 +6,8 @@ This page lists all changes since the first released version.
   * Initial Java 9 support (JIGSAW modules, signatures, deprecations) ([issue #39](../issues/39), [pull #50](../pull/50)).
   * Add annotation support (`@SuppressForbidden`) to suppress errors for classes/methods/fields. Annotations can be defined in config, also using glob patterns (e.g., `**.MySuppressForbidden`) ([issue #34](../issues/34), [issue #53](../issues/53)).
   * Forbid `MessageFormat.format(String,Object[])` because it uses default locale ([pull #48](../pull/48), thanks to Shalin Shekhar Mangar).
-  * Add support for forbidding java packages using class name globs (e.g., `sun.misc.**`). ([issue #40](../issues/40)).
-  * Sort error messages by source code line number. Also add synthetic methods and lambdas where they belong. ([issue #12](../issues/12)).
+  * Add support for forbidding java packages using class name globs (e.g., `sun.misc.**`) ([issue #40](../issues/40)).
+  * Sort error messages by source code line number. Also show failures in synthetic methods and lambdas where they belong ([issue #12](../issues/12)).
 
 **Bug fixes:**
   * Forbidden `@java.lang.Deprecated` is not always detected ([issue #45](../issues/45)).
