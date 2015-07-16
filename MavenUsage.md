@@ -57,3 +57,40 @@ The possible `<bundledSignatures>` can be found on a [separate page](BundledSign
 Since version 1.2 the goal was renamed to "check" and "testCheck" (to check the test classes) was added.
 
 The detailed documentation (based on nightly snapshots) can be found here: http://jenkins.thetaphi.de/job/Forbidden-APIs/javadoc/
+
+If you are Eclipse's M2E user, it is a good idea to disable the forbidden-apis plugin in the Eclipse build:
+
+```xml
+<build>
+  <pluginManagement>
+    <plugins>
+      <!--This plugin's configuration is used to store Eclipse m2e settings only. It has no influence on the Maven build itself.-->
+      <plugin>
+        <groupId>org.eclipse.m2e</groupId>
+        <artifactId>lifecycle-mapping</artifactId>
+        <version>1.0.0</version>
+        <configuration>
+          <lifecycleMappingMetadata>
+            <pluginExecutions>
+              <pluginExecution>
+                <pluginExecutionFilter>
+                  <groupId>de.thetaphi</groupId>
+                  <artifactId>forbiddenapis</artifactId>
+                  <versionRange>[1.0,)</versionRange>
+                  <goals>
+                    <goal>check</goal>
+                    <goal>testCheck</goal>
+                  </goals>
+                </pluginExecutionFilter>
+                <action>
+                  <ignore />
+                </action>
+              </pluginExecution>
+            </pluginExecutions>
+          </lifecycleMappingMetadata>
+        </configuration>
+      </plugin>
+    </plugins>
+  </pluginManagement>
+</build>
+```
