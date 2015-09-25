@@ -1,3 +1,3 @@
 # Gradle Usage Instructions #
 
-New in forbiddena-apis 2.0. Documentation coming soon!
+New in forbidden-apis 2.0. Documentation is coming soon!
