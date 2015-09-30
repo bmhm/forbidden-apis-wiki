@@ -15,15 +15,15 @@ Mojo property).
   * Switch default Maven lifecycle phase to "verify" ([pull #72](../pull/72)).
 
 **New features:**
-  * Add support for Gradle ([issue #68](../issues/68), [pull #70](../pull/70), [pull #73](../pull/73)).
+  * Add support for Gradle ([issue #68](../issues/68), [pull #70](../pull/70), [pull #73](../pull/73), thanks to Ryan Ernst & Chris Earle for help and suggestions).
   * Allow Maven artifacts to be loaded as signatures ([issue #13](../issues/13), [pull #79](../pull/79)).
   * Allow arbitrary Ant resources to be loaded as signatures ([pull #78](../pull/78)).
-  * Add `failOnViolation` setting to optionally fail builds ([pull #62](../pull/62)).
+  * Add `failOnViolation` setting to optionally fail builds ([pull #62](../pull/62), thanks to Jochen Schalanda).
   * Cleanup unsafe JDK signatures for Java 8 (mostly `java.time` API) ([issue #19](../issues/19), [pull #57](../pull/57)).
   * Support for Java 9 Jigsaw preview builds ([pull #74](../pull/74)).
 
 **Bug fixes:**
-  * Add automatic plugin execution override for M2E. It is no longer needed to add a lifecycle mapping to exclude forbiddenapis to execute inside Eclipse's M2E ([issue #60](../issue/60)).
+  * Add automatic plugin execution override for M2E. It is no longer needed to add a lifecycle mapping to exclude forbiddenapis to execute inside Eclipse's M2E ([issue #60](../issues/60)).
 
 **Internals:**
   * Package refactoring of Cli, Ant, Maven ([pull #69](../pull/69)).
