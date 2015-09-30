@@ -1,6 +1,6 @@
 This page lists all changes since the first released version.
 
-# Version 2.0 (released 2015-04-13) #
+# Version 1.8 (released 2015-04-13) #
 
 **New features:**
   * Initial Java 9 support (JIGSAW modules, signatures, deprecations) ([issue #39](../issues/39), [pull #50](../pull/50)).
@@ -64,7 +64,7 @@ This page lists all changes since the first released version.
 
 **New features:**
   * Upgrade to ASM 5.0 ([issue #24](../issues/24)).
-  * Full support for Java 8: Update deprecated signatures with final version of JDK 2.0.0; recompile and verify test classes.
+  * Full support for Java 8: Update deprecated signatures with final version of JDK 1.8.0; recompile and verify test classes.
 
 **Bug fixes:**
   * Add some missing unsafe signatures ([issue #22](../issues/22)).
