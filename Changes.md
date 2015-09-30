@@ -12,7 +12,7 @@ Mojo property).
 
 **Breaking changes:**
   * Update to Java 6 as minimum requirement ([pull #71](../pull/71)).
-  * Switch default Maven lifecycle phase to "verify" ([pull #72](../pull/72)).
+  * Switch default Maven lifecycle phase to `verify` ([pull #72](../pull/72)).
 
 **New features:**
   * Add support for Gradle ([issue #68](../issues/68), [pull #70](../pull/70), [pull #73](../pull/73), thanks to Ryan Ernst & Chris Earle for help and suggestions).
