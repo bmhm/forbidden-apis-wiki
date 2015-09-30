@@ -5,7 +5,7 @@ The Ant task can be downloaded as an Ant Task from this web page (the JAR file p
 ```xml
 <project>
 
-  <taskdef name="forbiddenapis" classname="de.thetaphi.forbiddenapis.AntTask" classpath="path/to/forbiddenapis.jar"/>
+  <taskdef name="forbiddenapis" classname="de.thetaphi.forbiddenapis.ant.AntTask" classpath="path/to/forbiddenapis.jar"/>
 
   <property name="src.dir" location="..."/>
   <property name="build.dir" location="..."/>
@@ -66,7 +66,7 @@ If your project is using [Apache Ivy](http://ant.apache.org/ivy/) (recommended),
   </path>
 
   <target name="-init">
-    <ivy:cachepath organisation="de.thetaphi" module="forbiddenapis" revision="1.8"
+    <ivy:cachepath organisation="de.thetaphi" module="forbiddenapis" revision="2.0"
       inline="true" pathid="forbiddenapis.classpath"/>
     <taskdef uri="antlib:de.thetaphi.forbiddenapis" classpathref="forbiddenapis.classpath"/>
   </target>
