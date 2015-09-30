@@ -1,5 +1,36 @@
 This page lists all changes since the first released version.
 
+# Version 2.0 (released 2015-09-30) #
+
+This is the major 2.0 release of the forbidden-apis plugin. The main new
+feature is native support for the [Gradle](https://gradle.org/) build system (minimum requirement is Gradle 2.3).
+But also Apache Ant and Apache Maven build systems got improved support: Ant can now load signatures from
+arbitrary resources by using a new XML element `<signatures></signatures>` that may contain
+any valid ANT resource, e.g., ivy's cache-filesets or plain URLs. Apache Maven now supports
+to load signatures files as artifacts from your repository or Maven Central (new `signaturesArtifacts`
+Mojo property).
+
+**Breaking changes:**
+  * Update to Java 6 as minimum requirement ([pull #71](../pull/71)).
+  * Switch default Maven lifecycle phase to "verify" ([pull #72](../pull/72)).
+
+**New features:**
+  * Add support for Gradle ([issue #68](../issues/68), [pull #70](../pull/70), [pull #73](../pull/73)).
+  * Allow Maven artifacts to be loaded as signatures ([issue #13](../issues/13), [pull #79](../pull/79)).
+  * Allow arbitrary Ant resources to be loaded as signatures ([pull #78](../pull/78)).
+  * Add `failOnViolation` setting to optionally fail builds ([pull #62](../pull/62)).
+  * Cleanup unsafe JDK signatures for Java 8 (mostly `java.time` API) ([issue #19](../issues/19), [pull #57](../pull/57)).
+  * Support for Java 9 Jigsaw preview builds ([pull #74](../pull/74)).
+
+**Bug fixes:**
+  * Add automatic plugin execution override for M2E. It is no longer needed to add a lifecycle mapping to exclude forbiddenapis to execute inside Eclipse's M2E ([issue #60](../issue/60)).
+
+**Internals:**
+  * Package refactoring of Cli, Ant, Maven ([pull #69](../pull/69)).
+  * Refactor loggers and make Checker a final, non abstract class ([pull #67](../pull/67)).
+  * Use EnumSet for the checker options ([pull #64](../pull/64)).
+  * Add support for signature file URLs ([pull #77](../pull/77)).
+
 # Version 1.8 (released 2015-04-13) #
 
 **New features:**
