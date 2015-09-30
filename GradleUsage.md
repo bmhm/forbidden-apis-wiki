@@ -1,6 +1,6 @@
 # Gradle Usage Instructions #
 
-The plugin registers a separate task for each defined sourceSet using the default task naming convention.
+_(since version 2.0)_ The plugin registers a separate task for each defined sourceSet using the default task naming convention.
 For default Java projects, two tasks are created: `forbiddenApisMain` and `forbiddenApisTest`.
 Additional source sets will produce a task with similar names (`'forbiddenApis' + nameOfSourceSet`).
 All tasks are added as dependencies to the check default Gradle task. For convenience, the plugin
