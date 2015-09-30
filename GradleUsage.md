@@ -8,7 +8,7 @@ also defines an additional task forbiddenApis that runs checks on all source set
 
 Installation can be done from your `build.gradle` file:
 
-```
+```gradle
 buildscript {
   repositories {
     mavenCentral()
@@ -24,7 +24,7 @@ apply plugin: 'de.thetaphi.forbiddenapis'
 
 After that you can add the following task configuration closures:
 
-```
+```gradle
 forbiddenApisMain {
   bundledSignatures += 'jdk-system-out'
 }
@@ -33,7 +33,7 @@ forbiddenApisMain {
 (using the `+=` notation, you can add additional bundled signatures to the defaults).
 To define those defaults, which are used by all source sets, you can use the extension / convention mapping provided by the corresponding extension:
 
-```
+```gradle
 forbiddenApis {
   bundledSignatures = [ 'jdk-unsafe', 'jdk-deprecated' ]
   signaturesFiles = files('path/to/my/signatures.txt')
