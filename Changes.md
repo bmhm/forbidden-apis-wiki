@@ -5,7 +5,7 @@ This page lists all changes since the first released version.
 **New features:**
   * Add targetVersion support to Ant task ([issue #101](../issues/101)).
   * Add initial support for new Java 9 class file format ([pull #97](../pull/97)).
-  * Deprecate 'internalRuntimeForbidden' attribute and add a new bundles signatures `jdk-non-portable`
+  * Deprecate `internalRuntimeForbidden` attribute and add a new bundles signatures `jdk-non-portable`
     to and make heuristics reliable ([pull #95](../pull/95), [issue #54](../issues/54)).
   * Add new bundled signatures `jdk-internal` for disallowing internal runtime APIs ([issue #91](../issues/91), [pull #95](../pull/95)).
   * Add unsafe signatures for ResourceBundle ([issue #89](../issues/89)), thanks to Trejkaz.
