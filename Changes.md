@@ -3,7 +3,7 @@ This page lists all changes since the first released version.
 # Version 2.1 (released 2016-05-22) #
 
 **New features:**
-  * Add targetVersion support to Ant task enhancement ([issue #101](../issues/101)).
+  * Add targetVersion support to Ant task ([issue #101](../issues/101)).
   * Add initial support for new Java 9 class file format ([pull #97](../pull/97)).
   * Deprecate 'internalRuntimeForbidden' attribute and add a new bundles signatures `jdk-non-portable`
     to and make heuristics reliable ([pull #95](../pull/95), [issue #54](../issues/54)).
