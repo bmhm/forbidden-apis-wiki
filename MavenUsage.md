@@ -17,10 +17,8 @@ To use the forbidden API checker in Maven, use the following template to include
     <plugin>
       <groupId>de.thetaphi</groupId>
       <artifactId>forbiddenapis</artifactId>
-      <version>2.0</version>
+      <version>2.1</version>
       <configuration>
-        <!-- disallow undocumented classes like sun.misc.Unsafe: -->
-        <internalRuntimeForbidden>true</internalRuntimeForbidden>
         <!--
           if the used Java version is too new,
           don't fail, just do nothing:
@@ -33,6 +31,8 @@ To use the forbidden API checker in Maven, use the following template to include
           -->
           <bundledSignature>jdk-unsafe</bundledSignature>
           <bundledSignature>jdk-deprecated</bundledSignature>
+          <!-- disallow undocumented classes like sun.misc.Unsafe: -->
+          <bundledSignature>jdk-non-portable</bundledSignature>
         </bundledSignatures>
         <signaturesFiles>
           <signaturesFile>./rel/path/to/signatures.txt</signaturesFile>

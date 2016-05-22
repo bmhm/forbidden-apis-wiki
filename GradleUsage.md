@@ -14,7 +14,7 @@ buildscript {
     mavenCentral()
   }
   dependencies {
-    classpath 'de.thetaphi:forbiddenapis:2.0'
+    classpath 'de.thetaphi:forbiddenapis:2.1'
   }
 }
 
@@ -35,7 +35,7 @@ To define those defaults, which are used by all source sets, you can use the ext
 
 ```gradle
 forbiddenApis {
-  bundledSignatures = [ 'jdk-unsafe', 'jdk-deprecated' ]
+  bundledSignatures = [ 'jdk-unsafe', 'jdk-deprecated', 'jdk-non-portable' ]
   signaturesFiles = files('path/to/my/signatures.txt')
   ignoreFailures = false
 }

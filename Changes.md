@@ -1,5 +1,23 @@
 This page lists all changes since the first released version.
 
+# Version 2.1 (released 2016-05-22) #
+
+**New features:**
+  * Add targetVersion support to Ant task enhancement ([issue #101](../issues/101)).
+  * Add initial support for new Java 9 class file format ([pull #97](../pull/97)).
+  * Deprecate 'internalRuntimeForbidden' attribute and add a new bundles signatures `jdk-non-portable`
+    to and make heuristics reliable ([pull #95](../pull/95), [issue #54](../issues/54)).
+  * Add new bundled signatures `jdk-internal` for disallowing internal runtime APIs ([issue #91](../issues/91), [pull #95](../pull/95)).
+  * Add unsafe signatures for ResourceBundle ([issue #89](../issues/89)), thanks to Trejkaz.
+  * Add a bundle `jdk-reflection` that contains methods that bypass Java security ([pull #86](../pull/86)), thanks to Dominik Stadler.
+  * Add support for new Java version style "6.0" instead of "1.6" ([pull #81](../pull/81)).
+
+**Bug fixes:**
+  * Fix method checks to also look into superclasses if method was overridden ([issue #100](../issues/100)).
+  * Fix class loading order bugs ([issue #91](../issues/91)).
+  * Allow referencing non-jarred artefacts ([pull #87](../pull/87)), thanks to Dawid Weiss.
+  * Hide warnings about missing classes/methods/fields in deprecated signatures ([pull #84](../pull/84))
+
 # Version 2.0 (released 2015-09-30) #
 
 This is the major 2.0 release of the forbidden-apis plugin. The main new

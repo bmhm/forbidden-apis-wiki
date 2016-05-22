@@ -26,9 +26,10 @@ The Ant task can be downloaded as an Ant Task from this web page (the JAR file p
   </target>
 
   <target name="forbidden-checks" depends="compile">
-    <forbiddenapis internalRuntimeForbidden="true" classpathref="build.classpath" dir="${build.dir}">
-      <bundledsignatures name="jdk-unsafe-${jdk.version}"/>
-      <bundledsignatures name="jdk-deprecated-${jdk.version}"/>
+    <forbiddenapis classpathref="build.classpath" dir="${build.dir}" targetVersion="${jdk.version}">
+      <bundledsignatures name="jdk-unsafe"/>
+      <bundledsignatures name="jdk-deprecated"/>
+      <bundledsignatures name="jdk-non-portable"/>
       <signaturesFileset file="path/to/signatures.txt"/>
     </forbiddenapis>
   </target>
@@ -66,7 +67,7 @@ If your project is using [Apache Ivy](http://ant.apache.org/ivy/) (recommended),
   </path>
 
   <target name="-init">
-    <ivy:cachepath organisation="de.thetaphi" module="forbiddenapis" revision="2.0"
+    <ivy:cachepath organisation="de.thetaphi" module="forbiddenapis" revision="2.1"
       inline="true" pathid="forbiddenapis.classpath"/>
     <taskdef uri="antlib:de.thetaphi.forbiddenapis" classpathref="forbiddenapis.classpath"/>
   </target>
@@ -79,9 +80,10 @@ If your project is using [Apache Ivy](http://ant.apache.org/ivy/) (recommended),
   </target>
 
   <target name="forbidden-checks" depends="compile">
-    <fa:forbiddenapis internalRuntimeForbidden="true" classpathref="build.classpath" dir="${build.dir}">
-      <bundledsignatures name="jdk-unsafe-${jdk.version}"/>
-      <bundledsignatures name="jdk-deprecated-${jdk.version}"/>
+    <fa:forbiddenapis classpathref="build.classpath" dir="${build.dir}" targetVersion="${jdk.version}">
+      <bundledsignatures name="jdk-unsafe"/>
+      <bundledsignatures name="jdk-deprecated"/>
+      <bundledsignatures name="jdk-non-portable"/>
       <signaturesFileset file="path/to/signatures.txt"/>
     </fa:forbiddenapis>
   </target>

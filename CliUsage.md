@@ -3,8 +3,8 @@
 _(since version 1.1)_ You can call the forbidden API checker from the command line:
 
 ```
-$ java -jar forbiddenapis-2.0.jar --help
-usage: java -jar forbiddenapis-2.0.jar [options]
+$ java -jar forbiddenapis-2.1.jar --help
+usage: java -jar forbiddenapis-2.1.jar [options]
 Scans a set of class files for forbidden API usage.
     --allowmissingclasses              don't fail if a referenced class is
                                        missing on classpath
@@ -31,9 +31,10 @@ Scans a set of class files for forbidden API usage.
                                        files (separated by commas or
                                        option can be given multiple times,
                                        defaults to '**/*.class')
-    --internalruntimeforbidden         forbids calls to classes from the
-                                       internal java runtime (like
-                                       sun.misc.Unsafe)
+    --internalruntimeforbidden         DEPRECATED: forbids calls to
+                                       non-portable runtime APIs; use
+                                       bundled signatures
+                                       'jdk-non-portable' instead
     --suppressannotation <classname>   class name or glob pattern of
                                        annotation that suppresses error
                                        reporting in classes/methods/fields
