@@ -7,7 +7,7 @@ This page lists all changes since the first released version.
   * Add initial support for new Java 9 class file format ([pull #97](../pull/97)).
   * On Java 9 Jigsaw, don't use ASM to analyze system classes. This change makes it
     more unlikely that the tool will exit with "Bundled version of ASM cannot parse bytecode
-    of java.lang.Object class; marking runtime as not suppported" on Java 9+.
+    of java.lang.Object class; marking runtime as not suppported" on Java 9+
     ([commit](../commit/95d9d55ca49f78e9f2a0da824a10ddd07b6d151f)).
   * Deprecate `internalRuntimeForbidden` attribute and add a new bundles signatures `jdk-non-portable`
     to and make heuristics reliable ([pull #95](../pull/95), [issue #54](../issues/54)).
