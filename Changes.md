@@ -19,7 +19,7 @@ This page lists all changes since the first released version.
   * Hide warnings about missing classes/methods/fields in deprecated signatures ([pull #84](../pull/84))
 
 **Internals:**
-  * Update to [ASM 5.1](https://github.com/policeman-tools/forbidden-apis/commit/a235498503d01dfda8030dd978eb278a693d84c0)
+  * Update to [ASM 5.1](../commit/a235498503d01dfda8030dd978eb278a693d84c0)
 
 # Version 2.0 (released 2015-09-30) #
 
