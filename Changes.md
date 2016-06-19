@@ -1,5 +1,15 @@
 This page lists all changes since the first released version.
 
+# Version 2.2 (released 2016-06-19) #
+
+**New features / bug fixes:**
+  * Add support for signature polymorphic methods ([issue #105](../issues/105), [pull #106](../pull/106)), thanks to Robert.
+  * Add signatures for commons-io-unsafe-2.5 ([issue #102](../issues/102)).
+  * Add some missing methods to commons-io signatures after another review ([pull #104](../pull/104)).
+  * Add new setting to disable the classloading cache. This is a workarounds for build systems that change JAR files,
+    but don't close their classloaders, leading to FileNotFoundExceptions when trying to load class files from
+    the changed JAR file. This affects especially the Gradle Daemon ([issue #75](../issues/75), [pull #76](../pull/76)).
+
 # Version 2.1 (released 2016-05-22) #
 
 **New features:**
