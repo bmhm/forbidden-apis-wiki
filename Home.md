@@ -7,7 +7,7 @@ I started to hack a tool as a custom [Apache Ant](http://ant.apache.org/) task u
 ## About the Github project ##
 This project was started as a fork of the internal [Apache Ant](http://ant.apache.org/) Task. It additionally provides a [Apache Maven](http://maven.apache.org/) [Mojo](http://maven.apache.org/guides/introduction/introduction-to-plugins.html), that can check your application classes against forbidden signatures, too.
 
-The Apache Ant and Apache Maven Mojo are available for download or use with Maven/Ivy through [Maven Central](http://repo1.maven.org/maven2/de/thetaphi/forbiddenapis/) and [Sonatype](http://oss.sonatype.org/content/repositories/releases/de/thetaphi/forbiddenapis/) repositories. Nightly snapshot builds are done by the [Policeman Jenkins Server](http://jenkins.thetaphi.de/job/Forbidden-APIs/) and can be downloaded from the [Sonatype Snapshot](https://oss.sonatype.org/content/repositories/snapshots/de/thetaphi/forbiddenapis/) repository.
+The Apache Ant and Apache Maven Mojo are available for download or use with Maven/Ivy through [Maven Central](http://repo1.maven.org/maven2/de/thetaphi/forbiddenapis/) and [Sonatype](http://oss.sonatype.org/content/repositories/releases/de/thetaphi/forbiddenapis/) repositories. Nightly snapshot builds are done by the [Policeman Jenkins Server](https://jenkins.thetaphi.de/job/Forbidden-APIs/) and can be downloaded from the [Sonatype Snapshot](https://oss.sonatype.org/content/repositories/snapshots/de/thetaphi/forbiddenapis/) repository.
 
 ## News ##
 **The current version is 2.2, released on 2016-06-19**. Changes for each released version are listed on the following page: [Changes](Changes)
@@ -18,4 +18,4 @@ The Apache Ant and Apache Maven Mojo are available for download or use with Mave
   * [Gradle Usage Instructions](GradleUsage)
   * [Command Line Usage Instructions](CliUsage) (version 1.1+)
 
-  * [Nightly Snapshot Documentation](http://jenkins.thetaphi.de/job/Forbidden-APIs/javadoc/) (detailed)
+  * [Nightly Snapshot Documentation](https://jenkins.thetaphi.de/job/Forbidden-APIs/javadoc/) (detailed)

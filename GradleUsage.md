@@ -43,4 +43,4 @@ forbiddenApis {
 
 The possible `bundledSignatures` can be found on a [separate page](BundledSignatures). You can also give your own signatures in separate files from your project directory.
 
-The detailed documentation (based on nightly snapshots) can be found here: http://jenkins.thetaphi.de/job/Forbidden-APIs/javadoc/
+The detailed documentation (based on nightly snapshots) can be found here: https://jenkins.thetaphi.de/job/Forbidden-APIs/javadoc/

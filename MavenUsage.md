@@ -57,4 +57,4 @@ The possible `<bundledSignatures>` can be found on a [separate page](BundledSign
 Since version 1.2 the goal was renamed to "check" and "testCheck" (to check the test classes) was added. Since version 2.0, the plugin runs by default in the `verify` lifecycle phase.
 Of course, you can assign any other phase, like the previous `process-classes` / `process-test-classes`.
 
-The detailed documentation (based on nightly snapshots) can be found here: http://jenkins.thetaphi.de/job/Forbidden-APIs/javadoc/
+The detailed documentation (based on nightly snapshots) can be found here: https://jenkins.thetaphi.de/job/Forbidden-APIs/javadoc/

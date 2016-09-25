@@ -93,4 +93,4 @@ If your project is using [Apache Ivy](http://ant.apache.org/ivy/) (recommended),
 
 If you don't like the additional XML-Namespaces, you can of course also define the task like in the first example, with Ivy's cachepath as reference.
 
-The detailed documentation (based on nightly snapshots) can be found here: http://jenkins.thetaphi.de/job/Forbidden-APIs/javadoc/
+The detailed documentation (based on nightly snapshots) can be found here: https://jenkins.thetaphi.de/job/Forbidden-APIs/javadoc/
