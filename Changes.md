@@ -1,5 +1,15 @@
 This page lists all changes since the first released version.
 
+# Version 2.3 (released 2017-02-13) #
+
+**New features / bug fixes:**
+  * Improve Gradle startup time: `apply plugin: 'de.thetaphi.forbiddenapis'` was
+    changed to compile `plugin-init.groovy` only once ([issue #116](../issues/116),
+    [pull #117](../pull/117)), thanks to Jörn Huxhorn.
+  * Update Groovy to version 2.4.8 for Java 9 compatibility.
+  * Update ASM to version 5.2.
+  * Update Java 9 bundled signatures files.
+
 # Version 2.2 (released 2016-06-19) #
 
 **New features / bug fixes:**
