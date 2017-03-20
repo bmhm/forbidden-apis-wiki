@@ -1,6 +1,6 @@
 This page lists all changes since the first released version.
 
-[![Maven Central](https://img.shields.io/maven-central/v/de.thetaphi/forbiddenapis.svg)](http://search.maven.org/#search%7Cga%7C1%7Cg%3A%22de.thetaphi%22%20AND%20a%3A%22forbiddenapis%22)
+[![Maven Central](https://img.shields.io/maven-central/v/de.thetaphi/forbiddenapis.svg)](https://search.maven.org/#search%7Cga%7C1%7Cg%3A%22de.thetaphi%22%20AND%20a%3A%22forbiddenapis%22)
 
 # Version 2.3 (released 2017-02-13) #
 
