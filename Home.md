@@ -1,6 +1,9 @@
 # Policeman's Forbidden API checker #
 This project implements the ANT task (+ Maven Mojo) announced in the [Generics Policeman Blog](http://blog.thetaphi.de/2012/07/default-locales-default-charsets-and.html). It checks Java byte code against a list of "forbidden" API signatures.
 
+[![Maven Central](https://img.shields.io/maven-central/v/de.thetaphi/forbiddenapis.svg)](http://search.maven.org/#search%7Cga%7C1%7Cg%3A%22de.thetaphi%22%20AND%20a%3A%22forbiddenapis%22)
+[![Build Status](https://jenkins.thetaphi.de/job/Forbidden-APIs/badge/icon)](https://jenkins.thetaphi.de/job/Forbidden-APIs/)
+
 ## A new Tool for the Policeman ##
 I started to hack a tool as a custom [Apache Ant](http://ant.apache.org/) task using [ASM](http://asm.ow2.org/) (Lightweight Java Bytecode Manipulation Framework). The idea was to provide a list of methods signatures, field names and plain class names that should fail the build, once bytecode accesses it in any way. A first version of this task was published in as [Apache Lucene](http://lucene.apache.org/core/) issue [LUCENE-4199](https://issues.apache.org/jira/browse/LUCENE-4199), later improvements was to add support for fields ([LUCENE-4202](https://issues.apache.org/jira/browse/LUCENE-4202)) and a sophisticated signature expansion to also catch calls to subclasses of the given signatures ([LUCENE-4206](https://issues.apache.org/jira/browse/LUCENE-4206)).
 
