@@ -1,5 +1,6 @@
 # Policeman's Forbidden API checker #
-This project implements the ANT task (+ Maven Mojo) announced in the [Generics Policeman Blog](http://blog.thetaphi.de/2012/07/default-locales-default-charsets-and.html). It checks Java byte code against a list of "forbidden" API signatures.
+This project implements the ANT / Gradle task and Maven Mojo announced in the [Generics Policeman Blog](http://blog.thetaphi.de/2012/07/default-locales-default-charsets-and.html).
+It checks Java byte code against a list of "forbidden" API signatures.
 
 [![Maven Central](https://img.shields.io/maven-central/v/de.thetaphi/forbiddenapis.svg)](https://search.maven.org/#search%7Cga%7C1%7Cg%3A%22de.thetaphi%22%20AND%20a%3A%22forbiddenapis%22)
 [![Build Status](https://jenkins.thetaphi.de/job/Forbidden-APIs/badge/icon)](https://jenkins.thetaphi.de/job/Forbidden-APIs/)
@@ -18,7 +19,8 @@ The Apache Ant and Apache Maven Mojo are available for download or use with Mave
 ## Documentation ##
   * [Apache Ant Usage Instructions](AntUsage)
   * [Apache Maven Usage Instructions](MavenUsage)
-  * [Gradle Usage Instructions](GradleUsage)
+  * [Gradle Usage Instructions](GradleUsage) (version 2.0+)
   * [Command Line Usage Instructions](CliUsage) (version 1.1+)
+  * [Syntax of Forbidden Signatures](SignaturesSyntax)
 
   * [Nightly Snapshot Documentation](https://jenkins.thetaphi.de/job/Forbidden-APIs/javadoc/) (detailed)
