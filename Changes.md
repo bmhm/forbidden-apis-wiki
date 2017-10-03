@@ -2,6 +2,34 @@ This page lists all changes since the first released version.
 
 [![Maven Central](https://img.shields.io/maven-central/v/de.thetaphi/forbiddenapis.svg)](https://search.maven.org/#search%7Cga%7C1%7Cg%3A%22de.thetaphi%22%20AND%20a%3A%22forbiddenapis%22)
 
+# Version 2.4.1 (released 2017-10-04) #
+
+**Bug fixes:**
+  * Fix regression in Gradle Task: Dependencies on `SourceSet` outputs were not correctly setup
+    ([issue #131](../issues/131)).
+
+# Version 2.4 (released 2017-10-03) #
+
+*Warning:* This version is buggy, please use bugfix release 2.4.1!
+
+**New features:**
+  * Fix deprecation warning with Gradle 4. This requires changes in the Gradle task:
+    `classesDir` property  was **deprecated** and replaced by `classesDirs`. Most users
+    will not see a change, as this property is only used in advanced setups.
+    The new property is now a `FileCollection` containing all classes output dirs
+    of the task's `SourceSet` ([issue #120](../issues/120), [pull #124](../pull/124)),
+    thanks to Jörn Huxhorn for reporting. See [potential breaking changes in
+    Gradle 4](https://docs.gradle.org/4.0/release-notes.html#potential-breaking-changes).
+  * Update ASM to version 6.0 and remove class file patching. This adds full Java 9 support.
+  * Change source/target Java version normalization to respect new Java version numbering scheme.
+    `targetVersion` config property can now be `'1.6', '6', '1.7', '7', '1.8', '8', '9'`, while
+    the bundled signatures files now use official version numbers ([issue #130](../issues/130)).
+  * Improve usage of Module API in Java 9 as fallback for future Java versions
+    ([issue #118](../issues/118)). This allows usage in newer Java runtimes without
+    upgrading ASM.
+  * Add documentation about custom signatures files ([issue #128](../issues/128)), thanks
+    Roman Leventov.
+
 # Version 2.3 (released 2017-02-13) #
 
 **New features / bug fixes:**

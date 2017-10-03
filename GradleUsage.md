@@ -14,7 +14,7 @@ buildscript {
     mavenCentral()
   }
   dependencies {
-    classpath 'de.thetaphi:forbiddenapis:2.3'
+    classpath 'de.thetaphi:forbiddenapis:2.4.1'
   }
 }
 

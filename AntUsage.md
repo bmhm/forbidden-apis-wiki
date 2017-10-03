@@ -67,7 +67,7 @@ If your project is using [Apache Ivy](http://ant.apache.org/ivy/) (recommended),
   </path>
 
   <target name="-init">
-    <ivy:cachepath organisation="de.thetaphi" module="forbiddenapis" revision="2.3"
+    <ivy:cachepath organisation="de.thetaphi" module="forbiddenapis" revision="2.4.1"
       inline="true" pathid="forbiddenapis.classpath"/>
     <taskdef uri="antlib:de.thetaphi.forbiddenapis" classpathref="forbiddenapis.classpath"/>
   </target>
