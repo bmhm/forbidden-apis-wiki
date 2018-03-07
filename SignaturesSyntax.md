@@ -21,6 +21,7 @@ of signatures are supported:
   * *A method signature:* It consists of a binary class name, followed by `#`
     and a method name including method parameters: `java.lang.String#concat(java.lang.String)` --
     All method parameters need to use fully qualified class names!
+    To refer to instance constructors, use the method name `<init>`, e.g. `java.lang.Integer#<init>(int)`.
 
 The error message displayed when the signature matches can be given at the end of each
 signature line using "`@`" as separator:
