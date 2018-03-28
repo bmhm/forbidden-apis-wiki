@@ -2,6 +2,21 @@ This page lists all changes since the first released version.
 
 [![Maven Central](https://img.shields.io/maven-central/v/de.thetaphi/forbiddenapis.svg)](https://search.maven.org/#search%7Cga%7C1%7Cg%3A%22de.thetaphi%22%20AND%20a%3A%22forbiddenapis%22)
 
+# Version 2.5 (released 2018-03-28) #
+
+**New features:**
+  * Add Java 10 support by upgrading to ASM 6.1.1 ([issue #136](../issues/136)).
+    This includes updated signatures files and build system changes.
+  * Add signatures for `commons-io-unsafe-2.6` ([pull #133](../pull/133)), thanks to Jochen Schalanda.
+  * Improve documentation about custom signatures files ([issue #135](../issues/135)), thanks
+    Roman Leventov.
+
+**Internals:**
+  * Add local signatures file to check ourselves (e.g., forbid direct use of ASM's `ClassReader` constructors).
+  * Simplify class file patching by loading bytecode of class files into byte arrays. This also works
+    around a slowness bug in ASM 6.1.
+  * Upgrade to Groovy 2.4.15.
+
 # Version 2.4.1 (released 2017-10-04) #
 
 **Bug fixes:**
