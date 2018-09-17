@@ -6,7 +6,15 @@ Additional source sets will produce a task with similar names (`'forbiddenApis' 
 All tasks are added as dependencies to the check default Gradle task. For convenience, the plugin
 also defines an additional task forbiddenApis that runs checks on all source sets.
 
-Installation can be done from your `build.gradle` file:
+Installation can be done from your build.gradle file using the Gradle plugin DSL:
+
+```gradle
+plugins {
+  id 'de.thetaphi.forbiddenapis' version '2.6'
+}
+```
+
+Alternatively, you can use the following script snippet if dynamic configuration is required (e.g., for own tasks):
 
 ```gradle
 buildscript {
@@ -14,11 +22,10 @@ buildscript {
     mavenCentral()
   }
   dependencies {
-    classpath 'de.thetaphi:forbiddenapis:2.5'
+    classpath 'de.thetaphi:forbiddenapis:2.6'
   }
 }
 
-apply plugin: 'java'
 apply plugin: 'de.thetaphi.forbiddenapis'
 ```
 

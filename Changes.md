@@ -2,6 +2,40 @@ This page lists all changes since the first released version.
 
 [![Maven Central](https://img.shields.io/maven-central/v/de.thetaphi/forbiddenapis.svg)](https://search.maven.org/#search%7Cga%7C1%7Cg%3A%22de.thetaphi%22%20AND%20a%3A%22forbiddenapis%22)
 
+# Version 2.6 (released 2018-09-17) #
+
+**New features:**
+  * Add Java 11 support by upgrading to ASM 6.2.1. This includes updated signatures files
+    and build system changes (shipped documentation is currently missing reference to
+    Java 11, sorry).
+  * The plugin was published on the [Gradle Plugin portal](https://plugins.gradle.org/plugin/de.thetaphi.forbiddenapis).
+    Due to a bug in plugin initialization ([issue #144](../issues/144)), older versions may not fully work.
+    Thanks to Sebastian Davids and the Gradle team for help and pushing this forward!
+  * When signatures are using classes that are not found on classpath, the option to ignore
+    those warnings is no longer so noisy: It only lists all failed signatures separately
+    where methods/fields do not exit, but the missing classes are reported only with a
+    single line ([issue #83](../issues/83), [pull #140](../pull/140)), thanks ghost,
+    Tim Allison, Dawid Weiss.
+  * Report more details about class that failed to load while scanning the classes
+    to be checked ([issue #142](../issues/142)), thanks Trejkaz.
+  * Only print warning about Gradle daemon once.
+
+**Bug fixes:**
+  * Gradle: Fix SourceSets added after plugin loading don't get tasks
+    ([issue #138](../issues/138), [pull #139](../pull/139)).
+  * Add a hack for the broken JavaVersion enum in Gradle. It returns version "1.9" and "1.10"
+    (which are invalid targetCompatibility versions) and this problem is only fixed after Java 11.
+    Before Java 11 we switch to plain "majorVersion" property
+    ([issue #143](../issues/143)), thanks Sebastian Davids.
+  * Gradle: Always apply JavaBasePlugin, otherwise startup may fail with new plugin DSL,
+    as initialization order is undefined ([issue #144](../issues/144)), thanks Sebastian
+    Davids.
+
+**Internals:**
+  * Refactor signatures file parsing and lookup of signatures (remove from Checker).
+  * Workaround for Java 1.6 (minimum version) builds with Maven Central TLS settings.
+  * Cleanup Gradle plugin initialization exception handling, check minimal Gradle version.
+
 # Version 2.5 (released 2018-03-28) #
 
 **New features:**

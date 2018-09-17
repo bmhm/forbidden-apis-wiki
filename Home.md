@@ -14,7 +14,7 @@ This project was started as a fork of the internal [Apache Ant](http://ant.apach
 The Apache Ant and Apache Maven Mojo are available for download or use with Maven/Ivy through [Maven Central](http://repo1.maven.org/maven2/de/thetaphi/forbiddenapis/) and [Sonatype](http://oss.sonatype.org/content/repositories/releases/de/thetaphi/forbiddenapis/) repositories. Nightly snapshot builds are done by the [Policeman Jenkins Server](https://jenkins.thetaphi.de/job/Forbidden-APIs/) and can be downloaded from the [Sonatype Snapshot](https://oss.sonatype.org/content/repositories/snapshots/de/thetaphi/forbiddenapis/) repository.
 
 ## News ##
-**The current version is 2.5, released on 2018-03-28**. Changes for each released version are listed on the following page: [Changes](Changes)
+**The current version is 2.6, released on 2018-09-17**. Changes for each released version are listed on the following page: [Changes](Changes)
 
 ## Documentation ##
   * [Apache Ant Usage Instructions](AntUsage)
