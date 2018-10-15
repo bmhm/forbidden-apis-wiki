@@ -33,6 +33,8 @@ To use the forbidden API checker in Maven, use the following template to include
           <bundledSignature>jdk-deprecated</bundledSignature>
           <!-- disallow undocumented classes like sun.misc.Unsafe: -->
           <bundledSignature>jdk-non-portable</bundledSignature>
+          <!-- don't allow unsafe reflective access: -->
+          <bundledSignature>jdk-reflection</bundledSignature>
         </bundledSignatures>
         <signaturesFiles>
           <signaturesFile>./rel/path/to/signatures.txt</signaturesFile>

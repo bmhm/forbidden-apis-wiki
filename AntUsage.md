@@ -30,6 +30,7 @@ The Ant task can be downloaded as an Ant Task from this web page (the JAR file p
       <bundledsignatures name="jdk-unsafe"/>
       <bundledsignatures name="jdk-deprecated"/>
       <bundledsignatures name="jdk-non-portable"/>
+      <bundledsignatures name="jdk-reflection"/>
       <signaturesFileset file="path/to/signatures.txt"/>
     </forbiddenapis>
   </target>
@@ -84,6 +85,7 @@ If your project is using [Apache Ivy](http://ant.apache.org/ivy/) (recommended),
       <bundledsignatures name="jdk-unsafe"/>
       <bundledsignatures name="jdk-deprecated"/>
       <bundledsignatures name="jdk-non-portable"/>
+      <bundledsignatures name="jdk-reflection"/>
       <signaturesFileset file="path/to/signatures.txt"/>
     </fa:forbiddenapis>
   </target>

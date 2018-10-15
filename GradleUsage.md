@@ -42,7 +42,7 @@ To define those defaults, which are used by all source sets, you can use the ext
 
 ```gradle
 forbiddenApis {
-  bundledSignatures = [ 'jdk-unsafe', 'jdk-deprecated', 'jdk-non-portable' ]
+  bundledSignatures = [ 'jdk-unsafe', 'jdk-deprecated', 'jdk-non-portable', 'jdk-reflection' ]
   signaturesFiles = files('path/to/my/signatures.txt')
   ignoreFailures = false
 }
