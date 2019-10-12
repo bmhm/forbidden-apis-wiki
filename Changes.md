@@ -2,6 +2,27 @@ This page lists all changes since the first released version.
 
 [![Maven Central](https://img.shields.io/maven-central/v/de.thetaphi/forbiddenapis.svg)](https://search.maven.org/#search%7Cga%7C1%7Cg%3A%22de.thetaphi%22%20AND%20a%3A%22forbiddenapis%22)
 
+# Version 2.7 (released 2019-10-12) #
+
+**New features:**
+
+  * Add Java 12 and 13 support by upgrading to ASM 7.2. This includes updated signatures files
+    and build system changes (shipped documentation is currently missing reference to
+    Java 12 and 13, sorry).
+  * Replace jdk-unsafe class signatures of `java.io.FileReader` and `java.io.FileWriter`
+    by explicit constructor signatures since there are now safe methods with `Charset` that
+    can be used since Java 11 ([pull #152](../pull/152)), thanks Andreas Asplund. This allows
+    to use those classes in checked code starting from Java 11.
+
+**Bug fixes:**
+  * Do not emit "and 0 more" in ignored signatures message
+    ([pull #148](../pull/148)), thanks Dawid Weiss.
+    
+**Internals:**
+  * Add `InputStream#skip(long)` to forbiddenapi's own checks because it is flaky.
+    ([pull #150](../pull/150)), thanks Tim Allison.
+  * Update Groovy to latest 2.4.17 bugfix release.
+
 # Version 2.6 (released 2018-09-17) #
 
 **New features:**
