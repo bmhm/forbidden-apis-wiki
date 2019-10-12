@@ -23,7 +23,7 @@ This page lists all changes since the first released version.
     ([pull #150](../pull/150)), thanks Tim Allison.
   * Update Groovy to latest 2.4.17 bugfix release.
 
-Please note: There is Java 12 and Java 13 support, but as of limitations (no Java 6 compile support anymore),
+_Please note:_ There is Java 12 and Java 13 support, but as of limitations (no Java 6 compile support anymore),
 it can not be compiled/built with those Java versions. Creating deprecated/internal signatures files
 needs to bootstrap with earlier Java version. Once the tools classes are built, run them in a second
 step with targeted Java version.
