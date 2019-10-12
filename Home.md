@@ -1,5 +1,5 @@
 # Policeman's Forbidden API checker #
-This project implements the ANT / Gradle task and Maven Mojo announced in the [Generics Policeman Blog](http://blog.thetaphi.de/2012/07/default-locales-default-charsets-and.html).
+This project implements the ANT / Gradle task and Maven Mojo announced in the [Generics Policeman Blog](https://blog.thetaphi.de/2012/07/default-locales-default-charsets-and.html).
 It checks Java byte code against a list of "forbidden" API signatures.
 
 [![Maven Central](https://img.shields.io/maven-central/v/de.thetaphi/forbiddenapis.svg)](https://search.maven.org/#search%7Cga%7C1%7Cg%3A%22de.thetaphi%22%20AND%20a%3A%22forbiddenapis%22)
