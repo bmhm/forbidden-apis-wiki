@@ -2,6 +2,60 @@ This page lists all changes since the first released version.
 
 [![Maven Central](https://img.shields.io/maven-central/v/de.thetaphi/forbiddenapis.svg)](https://search.maven.org/#search%7Cga%7C1%7Cg%3A%22de.thetaphi%22%20AND%20a%3A%22forbiddenapis%22)
 
+# Version 3.0 (released 2020-04-27) #
+
+This is the major 3.0 release of the forbidden-apis plugin. The main new feature is
+support for the Gradle build cache and support for task configuration avoidance.
+The new version also supports Java 14.
+
+**Breaking changes:**
+  * Update to Java 7 as minimum requirement ([pull #160](../pull/160)).
+  * Update to Gradle 3.2 as minimum requirement ([pull #155](../pull/155)),
+    thanks `mkmaier`.
+  * Removal of all deprecated task settings/properties ([pull #161](../pull/161)).
+
+**New features:**
+
+  * Add Java 14 support by upgrading to ASM 8.0. This includes updated signatures files
+    and build system changes.
+  * Add support for lazy tasks API / task configuration avoidance. Starting with
+    Gradle 4.9, forbiddenapis will use the new lazy tasks API, so tasks are not
+    generated in the configuration phase unless they are needed in the task graph.
+    Older Gradle versions still use the old API ([issue #145](../issues/145),
+    [pull #162](../pull/162)), thanks to Ryan Ernst and Thomas Broyer.
+  * Allow to silently ignore signatures if a class was not found. This allows
+    to silence multi-module Maven/Gradle builds by adding a new setting to Gradle,
+    Maven, Ant tasks/mojos: `ignoreSignaturesOfMissingClasses`. In contrast to the now
+    deprecated `failOnUnresolvableSignatures`, it prints no warnings and at the same
+    time it enforces that method signatures are correct (if the class was found).
+    The previous setting had the big problem that it was often used for multi-module
+    builds only to workaround that some classes are missing in submodules, but the
+    (now-deprecated) setting `failOnUnresolvableSignatures=false` disabled *all* signatures
+    checking, so incorrect method descriptors (wrong parameters,...) were hidden on
+    parsing. This lead to unseen violations, just because some method parameter was
+    mistyped ([pull #164](../pull/164)). See also [issue #83](../issues/83) for
+    details. Thanks to Joep Weijers, Matthew Janssen, Dawid Weiss.
+  * Maven task now hides the warning if the classes directory/fileset is missing
+    ([pull #163](../pull/163)), thanks Joep Weijers
+
+**Bug fixes:**
+  * Fix some Gradle task annotations, so the build cache works correctly
+    ([pull #159](../pull/159), [pull #155](../pull/155)),
+    thanks `mkmaier` and Vladimir Sitnikov.
+    
+**Internals:**
+  * Use `https` for `repo.gradle.org` ([pull #154](../pull/154)), thanks `mkmaier`.
+  * Add some hacks to bootstrap the Maven 2 build parts (which uses `http` instead of `https`
+    to bootstrap itsself, which is no longer supported by Maven Central).
+
+_Please note:_ `repo.gradle.org` now requires TLS 1.2, which is not included in Java 7.
+The same applies for `repo1.maven.org`. To build with Java 7, the system downgrades all
+URLs to `http` and uses a separate replacement server for Maven Central. Unfortunately
+this does not work with Gradle's repository. For safety reasons and also to actually
+bootstrap the build, run everything one time with at least Java 8+. This will download
+all artifacts through a secure TLS 1.2 connection and cache them locally. To build a 
+release, Java 7 can then be used to run the build with recommended minimum version.
+
 # Version 2.7 (released 2019-10-12) #
 
 **New features:**

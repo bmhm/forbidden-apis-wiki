@@ -3,7 +3,7 @@
 Project downloads are available through:
 
   * [Maven Central](https://repo1.maven.org/maven2/de/thetaphi/forbiddenapis/)
-  * [Sonatype](https://oss.sonatype.org/content/repositories/releases/de/thetaphi/forbiddenapis/)
+  * [Gradle Plugin Portal](https://plugins.gradle.org/plugin/de.thetaphi.forbiddenapis)
 
 Changes for each released version are listed on the following page: [Changes](Changes)
 
