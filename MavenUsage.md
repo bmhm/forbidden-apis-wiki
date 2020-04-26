@@ -9,7 +9,7 @@ To use the forbidden API checker in Maven, use the following template to include
    as the compiler plugin and the forbidden API checker both
    use this version
   -->
-  <maven.compiler.target>1.6</maven.compiler.target>
+  <maven.compiler.target>1.7</maven.compiler.target>
 </properties>
 
 <build>

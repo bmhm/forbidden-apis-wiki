@@ -9,7 +9,7 @@ The Ant task can be downloaded as an Ant Task from this web page (the JAR file p
 
   <property name="src.dir" location="..."/>
   <property name="build.dir" location="..."/>
-  <property name="jdk.version" value="1.6"/>
+  <property name="jdk.version" value="1.7"/>
 
   <path id="build.classpath">
     <!--
@@ -58,7 +58,7 @@ If your project is using [Apache Ivy](http://ant.apache.org/ivy/) (recommended),
 
   <property name="src.dir" location="..."/>
   <property name="build.dir" location="..."/>
-  <property name="jdk.version" value="1.6"/>
+  <property name="jdk.version" value="1.7"/>
 
   <path id="build.classpath">
     <!--
