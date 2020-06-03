@@ -7,7 +7,7 @@ This page lists all changes since the first released version.
 **Bug fixes:**
   * Fix `Method not found while parsing signature: org.apache.commons.io.output.ByteArrayOutputStream#toString()`
     happening when using `commons-io-unsafe` (any version) with version 2.7 of the library on classpath.
-    Due to a binary compatible change (move of method to abstract superclass), signatures parsing
+    Due to a (still binary compatible) change (move of method to abstract superclass), signatures parsing
     was broken ([issue #168](../issues/168), [pull #169](../pull/169)), thanks to Quentin Caillard.
     A later version will have a better fix for this. This bugfix release adds support for the
     new library version by adding bundled signatures `commons-io-unsafe-2.7`.
