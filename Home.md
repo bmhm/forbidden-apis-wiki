@@ -14,7 +14,7 @@ This project was started as a fork of the internal [Apache Ant](http://ant.apach
 The Apache Ant task and the Apache Maven Mojo are available for download or use with Maven/Ivy through [Maven Central](http://repo1.maven.org/maven2/de/thetaphi/forbiddenapis/) and [Sonatype](http://oss.sonatype.org/content/repositories/releases/de/thetaphi/forbiddenapis/) repositories. The Gradle plugin is available through the [Gradle Plugin portal](https://plugins.gradle.org/plugin/de.thetaphi.forbiddenapis), but it's also hosted on Maven/Sonatype. Nightly snapshot builds are done by the [Policeman Jenkins Server](https://jenkins.thetaphi.de/job/Forbidden-APIs/) and can be downloaded from the [Sonatype Snapshot](https://oss.sonatype.org/content/repositories/snapshots/de/thetaphi/forbiddenapis/) repository.
 
 ## News ##
-**The current version is 3.0, released on 2020-04-27**. Changes for each released version are listed on the following page: [Changes](Changes)
+**The current version is 3.0.1, released on 2020-06-03**. Changes for each released version are listed on the following page: [Changes](Changes)
 
 ## Documentation ##
   * [Apache Ant Usage Instructions](AntUsage)

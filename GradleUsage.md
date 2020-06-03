@@ -10,7 +10,7 @@ Installation can be done from your build.gradle file using the Gradle plugin DSL
 
 ```gradle
 plugins {
-  id 'de.thetaphi.forbiddenapis' version '3.0'
+  id 'de.thetaphi.forbiddenapis' version '3.0.1'
 }
 ```
 
@@ -22,7 +22,7 @@ buildscript {
     mavenCentral()
   }
   dependencies {
-    classpath 'de.thetaphi:forbiddenapis:3.0'
+    classpath 'de.thetaphi:forbiddenapis:3.0.1'
   }
 }
 

@@ -2,6 +2,19 @@ This page lists all changes since the first released version.
 
 [![Maven Central](https://img.shields.io/maven-central/v/de.thetaphi/forbiddenapis.svg)](https://search.maven.org/#search%7Cga%7C1%7Cg%3A%22de.thetaphi%22%20AND%20a%3A%22forbiddenapis%22)
 
+# Version 3.0.1 (released 2020-06-03) #
+
+**Bug fixes:**
+  * Fix `Method not found while parsing signature: org.apache.commons.io.output.ByteArrayOutputStream#toString()`
+    happening when using `commons-io-unsafe` (any version) with version 2.7 of the library on classpath.
+    Due to a binary compatible change (move of method to abstract superclass), signatures parsing
+    was broken ([issue #168](../issues/168), [pull #169](../pull/169)), thanks to Quentin Caillard.
+    A later version will have a better fix for this. This bugfix release adds support for the
+    new library version by adding bundled signatures `commons-io-unsafe-2.7`.
+
+**Maintenance:**
+  * Upgrade ASM 8.0 to ASM 8.0.1
+
 # Version 3.0 (released 2020-04-27) #
 
 This is the major 3.0 release of the forbidden-apis plugin. The main new feature is
