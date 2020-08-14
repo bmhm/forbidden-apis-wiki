@@ -60,3 +60,33 @@ Since version 1.2 the goal was renamed to "check" and "testCheck" (to check the 
 Of course, you can assign any other phase, like the previous `process-classes` / `process-test-classes`.
 
 The detailed documentation (based on nightly snapshots) can be found here: https://jenkins.thetaphi.de/job/Forbidden-APIs/javadoc/
+
+## Suppression of specific classes
+
+### Suppression of generated classes
+
+You can suppress generated classes by using an annotation. 
+Those usually have one of the three following annotations:
+
+```xml
+<build>
+  <plugins>
+    <plugin>
+      <groupId>de.thetaphi</groupId>
+      <artifactId>forbiddenapis</artifactId>
+      <configuration>
+        <suppressAnnotations>
+          <!-- Java <= 8 -->
+          <suppressAnnotation>javax.processing.Generated</suppressAnnotation>
+          <!-- Java 9+ via javax.annotation-pi -->
+          <suppressAnnotation>javax.annotation.processing.Generated</suppressAnnotation>
+          <!-- immutables.org -->
+          <suppressAnnotation>org.immutables.value.Generated</suppressAnnotation>
+          <!-- Project Lombok -->
+          <suppressAnnotation>api.lombok.Generated</suppressAnnotation>
+        </suppressAnnotations>
+      </configuration>
+    </plugin>
+  </plugins>
+</build>
+```
